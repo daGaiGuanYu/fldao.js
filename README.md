@@ -10,13 +10,12 @@
 # 干什么用的？
 使代码更好写、更好看
 
-# 使用
-##### 安装
+## 安装
 ```bash
 npm install fldao
 ```
 
-##### check2go
+## check2go
 > 可有可无的语义性能提升
 > 无元编程
 
@@ -42,7 +41,7 @@ function(person, school){
 ```js
 const check2go = require('fldao/check2go')
 
-function(person){
+function(person, school){
   check2go(person && person.name, school && school.name, (pName, sName) => {
     console.log(pName)
     console.log(sName)
@@ -52,7 +51,7 @@ function(person){
 }
 ```
 
-##### asCallback
+## asCallback
 > 元编程
 
 使用前：
