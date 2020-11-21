@@ -63,5 +63,7 @@ beforeShow( () => {
 ```
 使用后：
 ```js
+require('fldao')
+
 beforeShow(go.asCallback('gogo'))
 ```
