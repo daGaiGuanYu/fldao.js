@@ -1,4 +1,4 @@
 // 向函数添加入参
-Function.prototype.asCallback = function(){
+Function.prototype.asCB = function(){
   return this.bind(null, ...arguments)
 }

@@ -16,10 +16,11 @@ npm install fldao
 ```
 
 ## check2go
-> 可有可无的语义性能提升
-> 无元编程
+> check to go  
+> 可有可无的语义性能提升  
+> 无元编程  
 
-场景：
+场景：  
 你要频繁操作两个对象的 **某个** 属性  
 但是在这之前，你要先检查这俩对象是否存在，以及他们是否有这俩属性  
 
@@ -51,8 +52,9 @@ function(person, school){
 }
 ```
 
-## asCallback
-> 元编程
+## asCB
+> as callback  
+> 元编程  
 
 使用前：
 ```js
@@ -64,5 +66,5 @@ beforeShow( () => {
 ```js
 require('fldao')
 
-beforeShow(go.asCallback('gogo'))
+beforeShow(go.asCB('gogo'))
 ```
