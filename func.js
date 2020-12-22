@@ -6,8 +6,8 @@ exports.check2go = function(){
   return cb(...arguments)
 }
 
-const isNil = exports.isNil = function(target) {
-  return target == undefined || target == null
+const isNil = exports.isNil = function(target, allowed) {
+  return (allowed.indexOf(target) == -1) && !target
 }
 
 exports.parsePugStr = function(str){
