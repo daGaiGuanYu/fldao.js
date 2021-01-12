@@ -24,3 +24,7 @@ exports.parsePugStr = function(str){
   let [id, ...classList] = idAndClass.split('.')
   return { tagName, id, classList }
 }
+
+exports.merge = function(){
+  return Object.assign({}, ...arguments)
+}
