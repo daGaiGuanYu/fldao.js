@@ -1,15 +1,15 @@
-// 模仿 react 的 useState、useEffect
+// 保存一个数据，变化时，触发事件
+const Events = require('./events')
 
-export default class State {
+export default class extends Events {
   constructor(value){
     this.value = value
-    this.effectList = []
   }
   set(v){
     this.value = v
-    this.effectList.forEach(cb => cb(v))
+    this.emit('after')
   }
-  addEffect(cb){
-    this.effectList.push(cb)
+  afterChange(cb){
+    this.on('after', cb)
   }
 }
