@@ -1,10 +1,7 @@
-async function main(){
-  const data = await new Promise( res => {
-    setTimeout(() => {
-      res(1, 2, 3)
-    }, 100)
+new Promise( res => {
+  setTimeout(res, 1000, 2)
+})
+  .finally(() => {
+    console.log('f')
   })
-  console.log(data)
-}
-
-main()
+  .then(console.log)
