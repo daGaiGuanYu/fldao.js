@@ -4,6 +4,6 @@ module.exports = function(msg, job) {
     if(done)
       throw Error(msg)
     done = true
-    return job()
+    return job(...arguments)
   }
 }
