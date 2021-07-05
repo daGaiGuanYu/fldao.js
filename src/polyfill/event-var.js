@@ -3,13 +3,20 @@ const Events = require('./events')
 
 export default class extends Events {
   constructor(value){
-    this.value = value
+    this.__value = value
   }
-  set(v){
-    this.value = v
+  set(v) {
+    this.emit('before')
+    this.__value = v
     this.emit('after')
   }
-  afterChange(cb){
+  get() {
+    return this.__value
+  }
+  beforeChange(cb) {
+    this.on('before', cb)
+  }
+  afterChange(cb) {
     this.on('after', cb)
   }
 }
